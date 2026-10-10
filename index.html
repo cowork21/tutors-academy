@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tutor's Academy connects parents and students with verified tutors for online and home tuition, Nursery to Class 12, Delhi/NCR and beyond.">
+<title>Tutor's Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<style>
+  /* Layout: single column, exercise-book ruled hero with a red margin line; cards for openings. */
+  :root {
+    --paper: #f7f9fc;        /* page background */
+    --card: #ffffff;         /* card surface */
+    --ink: #1c2b40;          /* body text, like fountain-pen ink */
+    --ink-soft: #5a6b82;     /* secondary text */
+    --blue: #1b4f9c;         /* primary accent */
+    --blue-deep: #143b75;    /* hover / headings */
+    --rule: #dce4ee;         /* borders + notebook lines */
+    --margin-red: #d8432f;   /* the red margin rule of a school notebook */
+    --chip: #e9f0fa;         /* chip background */
+    --display: "Baloo 2", "Trebuchet MS", sans-serif;
+    --body: "Karla", "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101722; --card: #18212f; --ink: #e8edf5; --ink-soft: #9fb0c5;
+      --blue: #6ea8ff; --blue-deep: #8fbcff; --rule: #2a3749; --margin-red: #ff7a66;
+      --chip: #223047; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101722; --card: #18212f; --ink: #e8edf5; --ink-soft: #9fb0c5;
+    --blue: #6ea8ff; --blue-deep: #8fbcff; --rule: #2a3749; --margin-red: #ff7a66;
+    --chip: #223047; color-scheme: dark;
+  }
+
+  body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding-inline: 20px; }
+  h1, h2, h3 { font-family: var(--display); color: var(--blue-deep); line-height: 1.2; text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  a { color: var(--blue); }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--rule); position: sticky; top: env(safe-area-inset-top, 0px); background: var(--paper); z-index: 5; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+  .logo { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: var(--blue-deep); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .logo-badge { width: 30px; height: 30px; border-radius: 8px; background: var(--blue); color: #fff; display: grid; place-items: center; font-size: 1rem; }
+  .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  .nav-links a { text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: .95rem; }
+  .nav-links a:hover { color: var(--blue); }
+
+  /* Hero: ruled notebook lines + red margin rule */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    background:
+      linear-gradient(to right, transparent 0, transparent 44px, var(--margin-red) 44px, var(--margin-red) 46px, transparent 46px),
+      repeating-linear-gradient(to bottom, transparent 0, transparent 31px, var(--rule) 31px, var(--rule) 32px);
+    background-color: var(--paper);
+  }
+  .hero-inner { padding-block: 72px 64px; max-width: 640px; }
+  .eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--margin-red); }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-block: 10px 14px; }
+  .hero p { color: var(--ink-soft); max-width: 48ch; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .btn { font-family: var(--body); font-weight: 700; font-size: .95rem; text-decoration: none; border-radius: 10px; padding: 12px 22px; display: inline-block; border: 2px solid var(--blue); cursor: pointer; }
+  .btn-solid { background: var(--blue); color: #fff; }
+  .btn-solid:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+  .btn-line { color: var(--blue); background: var(--card); }
+  .btn-line:hover { color: var(--blue-deep); border-color: var(--blue-deep); }
+
+  /* Stats strip */
+  .stats { display: flex; gap: 12px; flex-wrap: wrap; padding-block: 26px; }
+  .stat { flex: 1 1 150px; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 18px; }
+  .stat b { font-family: var(--display); font-size: 1.25rem; color: var(--blue-deep); display: block; }
+  .stat span { color: var(--ink-soft); font-size: .88rem; }
+
+  section { padding-block: 48px; }
+  .sec-head { margin-bottom: 26px; }
+  .sec-head h2 { font-size: 1.7rem; }
+  .sec-head p { color: var(--ink-soft); margin-top: 6px; }
+
+  /* How it works */
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .path { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 24px; min-width: 0; }
+  .path h3 { font-size: 1.15rem; margin-bottom: 14px; }
+  .path ol { margin: 0; padding-left: 20px; color: var(--ink-soft); display: grid; gap: 10px; }
+  .path ol b { color: var(--ink); font-weight: 700; }
+
+  /* Openings board */
+  .board-note { font-size: .85rem; color: var(--ink-soft); background: var(--chip); border-radius: 8px; padding: 8px 12px; display: inline-block; margin-bottom: 18px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .assign { font-size: .78rem; font-weight: 700; letter-spacing: .08em; color: var(--margin-red); }
+  .mode { font-size: .75rem; font-weight: 700; background: var(--chip); color: var(--blue-deep); border-radius: 99px; padding: 3px 10px; }
+  .card h3 { font-size: 1.1rem; }
+  .meta { color: var(--ink-soft); font-size: .9rem; display: grid; gap: 4px; }
+  .fee { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .card .btn { margin-top: auto; text-align: center; padding: 9px 0; font-size: .9rem; }
+
+  /* Form placeholders */
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .form-slot { border: 2px dashed var(--rule); border-radius: 14px; padding: 28px 24px; background: var(--card); text-align: center; min-width: 0; }
+  .form-slot h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .form-slot p { color: var(--ink-soft); font-size: .92rem; max-width: 42ch; margin: 0 auto 18px; }
+  .slot-tag { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--margin-red); margin-bottom: 10px; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .contact-card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 20px; min-width: 0; }
+  .contact-card h3 { font-size: 1rem; margin-bottom: 6px; }
+  .contact-card p, .contact-card a { font-size: .95rem; color: var(--ink-soft); word-break: break-word; }
+  .tbd { color: var(--margin-red); font-weight: 700; }
+
+  footer { border-top: 1px solid var(--rule); padding-block: 24px 34px; color: var(--ink-soft); font-size: .88rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body { margin: 0; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="logo-badge">TA</span>Tutor's Academy</a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#openings">Openings</a>
+      <a href="#apply">Apply</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Delhi / NCR &amp; Online · Nursery to Class 12</p>
+    <h1>The right tutor for every student.</h1>
+    <p>Tutor's Academy connects parents and students with verified tutors for online and home tuition, across all major subjects and boards. Free demo class. Support at every step.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#apply">I need a tutor</a>
+      <a class="btn btn-line" href="#openings">I am a tutor</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="stats">
+    <div class="stat"><b>Nursery–12th</b><span>All classes covered</span></div>
+    <div class="stat"><b>All subjects</b><span>Maths, Science, English &amp; more</span></div>
+    <div class="stat"><b>Online + Home</b><span>You choose the mode</span></div>
+    <div class="stat"><b>Free demo</b><span>Before you commit</span></div>
+  </div>
+
+  <section id="how">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>Two simple paths, whether you're looking for a tutor or looking for work.</p>
+    </div>
+    <div class="two-col">
+      <div class="path">
+        <h3>For parents &amp; students</h3>
+        <ol>
+          <li><b>Tell us what you need.</b> Class, subject, schedule, budget and mode, through a short form.</li>
+          <li><b>Take a free demo.</b> We match a tutor to your requirement and arrange a demo class.</li>
+          <li><b>Start learning.</b> Happy with the demo? Classes begin on your schedule.</li>
+        </ol>
+      </div>
+      <div class="path">
+        <h3>For tutors</h3>
+        <ol>
+          <li><b>Register once.</b> Share your subjects, classes, experience and expected fee.</li>
+          <li><b>Pick an opening.</b> New tuition requirements are posted regularly, each with a number.</li>
+          <li><b>Get matched.</b> Apply to the assignments that fit you and we handle the rest.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="openings">
+    <div class="sec-head">
+      <h2>Current openings</h2>
+      <p>Live tuition requirements for tutors. Each assignment has a number, so quote it when you apply.</p>
+    </div>
+    <p class="board-note">Sample listings for this demo. The live site will show real, current assignments.</p>
+    <div class="cards" id="board"></div>
+  </section>
+
+  <section id="apply">
+    <div class="sec-head">
+      <h2>Apply now</h2>
+      <p>Both forms take under three minutes. We reply on WhatsApp.</p>
+    </div>
+    <div class="form-grid">
+      <!-- FILL: replace the href="#" below with the "Request a Tutor" Google Form link.
+           The form can also be embedded here directly with its <iframe> embed code. -->
+      <div class="form-slot">
+        <span class="slot-tag">For parents &amp; students</span>
+        <h3>Request a tutor</h3>
+        <p>Student's class, subjects, board, preferred schedule, budget and mode. We'll contact you with a matched tutor and a free demo.</p>
+        <a class="btn btn-solid" href="#">Open the form</a>
+      </div>
+      <!-- FILL: replace the href="#" below with the "Tutor Registration" Google Form link. -->
+      <div class="form-slot">
+        <span class="slot-tag">For tutors</span>
+        <h3>Register as a tutor</h3>
+        <p>Your qualifications, subjects, classes you teach, experience, city and expected fee. Mention an assignment number if you're applying to a specific opening.</p>
+        <a class="btn btn-line" href="#">Open the form</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head">
+      <h2>Contact us</h2>
+      <p>Reach us directly, or follow for new openings as they're posted.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <!-- FILL: phone numbers go here, e.g. +91 XXXXX XXXXX -->
+        <p class="tbd">[ Number to be added ]</p>
+      </div>
+      <div class="contact-card">
+        <h3>Email</h3>
+        <!-- FILL: official email goes here -->
+        <p class="tbd">[ Email to be added ]</p>
+      </div>
+      <div class="contact-card">
+        <h3>Instagram</h3>
+        <a href="https://www.instagram.com/tutors_academy__/">@tutors_academy__</a>
+      </div>
+      <div class="contact-card">
+        <h3>WhatsApp Channel</h3>
+        <a href="https://whatsapp.com/channel/0029Vb9T3XMIHphCL0TiXI1G">Tutor's Academy channel</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-inline:0;">
+    <span>© 2026 Tutor's Academy. All rights reserved.</span>
+    <span>Verify all details before making any payment. Official communication comes only through our listed contacts.</span>
+  </div>
+</footer>
+
+<script>
+  // Sample openings for the demo. On the live site this list can come from a Google Sheet
+  // the academy updates, so new assignments appear without editing the page.
+  const openings = [
+    { no: 148, cls: "Class 10", subject: "Mathematics", schedule: "5 days / week · 1 hr daily", fee: "₹8,000 / month", mode: "Online" },
+    { no: 147, cls: "Class 12", subject: "Economics", schedule: "3 days / week · 1 hr daily", fee: "₹600 / hour", mode: "Online" },
+    { no: 146, cls: "Class 8", subject: "Science + Maths", schedule: "4 days / week · 1.5 hr daily", fee: "₹6,500 / month", mode: "Home tuition" },
+    { no: 145, cls: "Class 6", subject: "English", schedule: "3 days / week · 1 hr daily", fee: "₹4,000 / month", mode: "Online" },
+    { no: 144, cls: "Class 11", subject: "Statistics", schedule: "4 days / week · 1 hr daily", fee: "₹9,000 / month", mode: "Online" },
+    { no: 143, cls: "Class 9", subject: "Social Science", schedule: "3 days / week · 1 hr daily", fee: "₹5,000 / month", mode: "Home tuition" },
+  ];
+
+  const board = document.getElementById("board");
+  for (const o of openings) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML =
+      '<div class="card-top"><span class="assign">ASSIGNMENT #' + o.no + '</span>' +
+      '<span class="mode">' + o.mode + '</span></div>' +
+      '<h3>' + o.cls + ' · ' + o.subject + '</h3>' +
+      '<div class="meta"><span>' + o.schedule + '</span>' +
+      '<span class="fee">' + o.fee + '</span></div>' +
+      '<a class="btn btn-line" href="#apply">Apply for this</a>';
+    board.appendChild(card);
+  }
+</script>
+</body>
+</html>
