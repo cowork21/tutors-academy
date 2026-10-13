@@ -1,0 +1,4 @@
+# Change the sitemap URL when the custom domain is connected
+User-agent: *
+Allow: /
+Sitemap: https://cowork21.github.io/tutors-academy/sitemap.xml

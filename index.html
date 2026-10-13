@@ -3,127 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Tutor's Academy connects parents and students with verified tutors for online and home tuition, Nursery to Class 12, Delhi/NCR and beyond.">
-<title>Tutor's Academy</title>
+<title>Home & Online Tuition in Delhi NCR | Tutor's Academy</title>
+<meta name="description" content="Tutor's Academy connects parents and students with verified tutors for online and home tuition, Nursery to Class 12, all subjects and boards, across Delhi NCR. Free demo class.">
+<!-- FILL: when the client's domain is connected, change this canonical URL to the real domain. -->
+<link rel="canonical" href="https://cowork21.github.io/tutors-academy/">
+<meta name="theme-color" content="#2e7cd6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tutor's Academy — Home & Online Tuition in Delhi NCR">
+<meta property="og:description" content="Verified tutors for Nursery to Class 12, online and at home. All subjects, all boards. Free demo class.">
+<meta property="og:url" content="https://cowork21.github.io/tutors-academy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Karla:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Tutor's Academy",
+  "description": "Tutor matching service for online and home tuition, Nursery to Class 12, Delhi NCR and other cities.",
+  "url": "https://cowork21.github.io/tutors-academy/",
+  "areaServed": "Delhi NCR, India",
+  "sameAs": [
+    "https://www.instagram.com/tutors_academy__/",
+    "https://whatsapp.com/channel/0029Vb9T3XMIHphCL0TiXI1G"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is the demo class really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every new student gets one free demo class with a matched tutor before committing to anything." } },
+    { "@type": "Question", "name": "Which classes and subjects do you cover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nursery to Class 12, all major subjects including Maths, Science, English, Social Science, Economics and Statistics, for all boards." } },
+    { "@type": "Question", "name": "Do you offer home tuition or online classes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both. Home tuition is available in Delhi NCR, and online classes are available everywhere." } },
+    { "@type": "Question", "name": "How do tutors get assignments?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Register once as a tutor, then apply to numbered tuition openings as they are posted. We match you and support you through the process." } },
+    { "@type": "Question", "name": "How much does tuition cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fees depend on class, subject and schedule, typically from a few hundred rupees per hour. Tell us your budget and we will match accordingly." } }
+  ]
+}
+</script>
 <style>
-  /* Layout: single column, exercise-book ruled hero with a red margin line; cards for openings. */
+  /* Layout: light, airy, phone-first single column; soft sky tints, white cards, big tap targets. */
   :root {
-    --paper: #f7f9fc;        /* page background */
+    --paper: #ffffff;        /* page background */
+    --tint: #f2f8ff;         /* alternating section tint */
     --card: #ffffff;         /* card surface */
-    --ink: #1c2b40;          /* body text, like fountain-pen ink */
-    --ink-soft: #5a6b82;     /* secondary text */
-    --blue: #1b4f9c;         /* primary accent */
-    --blue-deep: #143b75;    /* hover / headings */
-    --rule: #dce4ee;         /* borders + notebook lines */
-    --margin-red: #d8432f;   /* the red margin rule of a school notebook */
-    --chip: #e9f0fa;         /* chip background */
+    --ink: #24354d;          /* body text */
+    --ink-soft: #5e718a;     /* secondary text */
+    --blue: #2e7cd6;         /* primary accent */
+    --blue-deep: #1d5fb0;    /* hover / headings */
+    --sky: #dcecfd;          /* soft highlight */
+    --line: #e3ebf5;         /* borders */
+    --coral: #e8604c;        /* small highlights (assignment tags) */
+    --wa: #25d366;           /* WhatsApp green */
+    --shadow: 0 2px 12px rgba(36, 53, 77, .07);
     --display: "Baloo 2", "Trebuchet MS", sans-serif;
     --body: "Karla", "Segoe UI", Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #101722; --card: #18212f; --ink: #e8edf5; --ink-soft: #9fb0c5;
-      --blue: #6ea8ff; --blue-deep: #8fbcff; --rule: #2a3749; --margin-red: #ff7a66;
-      --chip: #223047; color-scheme: dark;
+      --paper: #121a26; --tint: #16202e; --card: #1b2634; --ink: #e9eef6; --ink-soft: #9db0c7;
+      --blue: #6ea8ff; --blue-deep: #93bfff; --sky: #22344d; --line: #2b3a4e; --coral: #ff8572;
+      --shadow: 0 2px 12px rgba(0,0,0,.3); color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --paper: #101722; --card: #18212f; --ink: #e8edf5; --ink-soft: #9fb0c5;
-    --blue: #6ea8ff; --blue-deep: #8fbcff; --rule: #2a3749; --margin-red: #ff7a66;
-    --chip: #223047; color-scheme: dark;
+    --paper: #121a26; --tint: #16202e; --card: #1b2634; --ink: #e9eef6; --ink-soft: #9db0c7;
+    --blue: #6ea8ff; --blue-deep: #93bfff; --sky: #22344d; --line: #2b3a4e; --coral: #ff8572;
+    --shadow: 0 2px 12px rgba(0,0,0,.3); color-scheme: dark;
   }
 
-  body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
-  .wrap { max-width: 1020px; margin: 0 auto; padding-inline: 20px; }
-  h1, h2, h3 { font-family: var(--display); color: var(--blue-deep); line-height: 1.2; text-wrap: balance; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; }
+  img { max-width: 100%; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding-inline: 18px; }
+  h1, h2, h3 { font-family: var(--display); color: var(--blue-deep); line-height: 1.22; text-wrap: balance; margin: 0; }
   p { margin: 0; }
   a { color: var(--blue); }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
-  /* Header */
-  header { border-bottom: 1px solid var(--rule); position: sticky; top: env(safe-area-inset-top, 0px); background: var(--paper); z-index: 5; }
-  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
-  .logo { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: var(--blue-deep); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-  .logo-badge { width: 30px; height: 30px; border-radius: 8px; background: var(--blue); color: #fff; display: grid; place-items: center; font-size: 1rem; }
-  .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
-  .nav-links a { text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: .95rem; }
-  .nav-links a:hover { color: var(--blue); }
-
-  /* Hero: ruled notebook lines + red margin rule */
-  .hero {
-    border-bottom: 1px solid var(--rule);
-    background:
-      linear-gradient(to right, transparent 0, transparent 44px, var(--margin-red) 44px, var(--margin-red) 46px, transparent 46px),
-      repeating-linear-gradient(to bottom, transparent 0, transparent 31px, var(--rule) 31px, var(--rule) 32px);
-    background-color: var(--paper);
+  /* Header with mobile menu */
+  header { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+  .logo { font-family: var(--display); font-weight: 700; font-size: 1.25rem; color: var(--blue-deep); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .logo-badge { width: 34px; height: 34px; border-radius: 10px; background: var(--blue); color: #fff; display: grid; place-items: center; font-size: 1rem; flex-shrink: 0; }
+  .menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 1.2rem; color: var(--blue-deep); cursor: pointer; line-height: 1; }
+  .nav-links { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--ink-soft); font-weight: 700; font-size: .95rem; padding: 10px 12px; border-radius: 10px; }
+  .nav-links a:hover { color: var(--blue); background: var(--tint); }
+  .nav-links .nav-cta { background: var(--blue); color: #fff; }
+  .nav-links .nav-cta:hover { background: var(--blue-deep); color: #fff; }
+  @media (max-width: 720px) {
+    .menu-btn { display: block; }
+    .nav-links { display: none; width: 100%; flex-direction: column; align-items: stretch; padding-bottom: 12px; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 13px 14px; text-align: center; background: var(--tint); }
+    .nav-links .nav-cta { background: var(--blue); }
   }
-  .hero-inner { padding-block: 72px 64px; max-width: 640px; }
-  .eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--margin-red); }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-block: 10px 14px; }
-  .hero p { color: var(--ink-soft); max-width: 48ch; }
+
+  /* Hero */
+  .hero { background: linear-gradient(180deg, var(--sky), var(--paper)); }
+  .hero-inner { padding-block: 56px 48px; max-width: 660px; }
+  .eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); }
+  .hero h1 { font-size: clamp(1.9rem, 6vw, 2.9rem); margin-block: 10px 14px; }
+  .hero p { color: var(--ink-soft); max-width: 50ch; font-size: 1.05rem; }
   .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-  .btn { font-family: var(--body); font-weight: 700; font-size: .95rem; text-decoration: none; border-radius: 10px; padding: 12px 22px; display: inline-block; border: 2px solid var(--blue); cursor: pointer; }
+  .btn { font-family: var(--body); font-weight: 700; font-size: 1rem; text-decoration: none; border-radius: 12px; padding: 14px 24px; display: inline-flex; justify-content: center; align-items: center; border: 2px solid var(--blue); cursor: pointer; min-height: 48px; }
   .btn-solid { background: var(--blue); color: #fff; }
   .btn-solid:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
   .btn-line { color: var(--blue); background: var(--card); }
   .btn-line:hover { color: var(--blue-deep); border-color: var(--blue-deep); }
+  @media (max-width: 540px) { .cta-row .btn { flex: 1 1 100%; } }
 
-  /* Stats strip */
-  .stats { display: flex; gap: 12px; flex-wrap: wrap; padding-block: 26px; }
-  .stat { flex: 1 1 150px; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 18px; }
-  .stat b { font-family: var(--display); font-size: 1.25rem; color: var(--blue-deep); display: block; }
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; padding-block: 26px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .stat b { font-family: var(--display); font-size: 1.3rem; color: var(--blue-deep); display: block; }
   .stat span { color: var(--ink-soft); font-size: .88rem; }
 
-  section { padding-block: 48px; }
-  .sec-head { margin-bottom: 26px; }
-  .sec-head h2 { font-size: 1.7rem; }
+  section { padding-block: 44px; }
+  .tinted { background: var(--tint); }
+  .sec-head { margin-bottom: 24px; }
+  .sec-head h2 { font-size: 1.6rem; }
   .sec-head p { color: var(--ink-soft); margin-top: 6px; }
 
   /* How it works */
-  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .path { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 24px; min-width: 0; }
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .path { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; min-width: 0; box-shadow: var(--shadow); }
   .path h3 { font-size: 1.15rem; margin-bottom: 14px; }
   .path ol { margin: 0; padding-left: 20px; color: var(--ink-soft); display: grid; gap: 10px; }
-  .path ol b { color: var(--ink); font-weight: 700; }
+  .path ol b { color: var(--ink); }
 
-  /* Openings board */
-  .board-note { font-size: .85rem; color: var(--ink-soft); background: var(--chip); border-radius: 8px; padding: 8px 12px; display: inline-block; margin-bottom: 18px; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
-  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  /* Openings */
+  .board-note { font-size: .85rem; color: var(--ink-soft); background: var(--sky); border-radius: 10px; padding: 8px 14px; display: inline-block; margin-bottom: 18px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; box-shadow: var(--shadow); }
   .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-  .assign { font-size: .78rem; font-weight: 700; letter-spacing: .08em; color: var(--margin-red); }
-  .mode { font-size: .75rem; font-weight: 700; background: var(--chip); color: var(--blue-deep); border-radius: 99px; padding: 3px 10px; }
-  .card h3 { font-size: 1.1rem; }
+  .assign { font-size: .76rem; font-weight: 700; letter-spacing: .08em; color: var(--coral); }
+  .mode { font-size: .75rem; font-weight: 700; background: var(--sky); color: var(--blue-deep); border-radius: 99px; padding: 4px 11px; white-space: nowrap; }
+  .card h3 { font-size: 1.08rem; }
   .meta { color: var(--ink-soft); font-size: .9rem; display: grid; gap: 4px; }
   .fee { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
-  .card .btn { margin-top: auto; text-align: center; padding: 9px 0; font-size: .9rem; }
+  .card .btn { margin-top: auto; padding: 11px 0; font-size: .92rem; }
 
-  /* Form placeholders */
-  .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start; }
-  .form-slot { border: 2px dashed var(--rule); border-radius: 14px; padding: 28px 24px; background: var(--card); text-align: center; min-width: 0; }
-  .form-slot h3 { font-size: 1.1rem; margin-bottom: 8px; }
-  .form-slot p { color: var(--ink-soft); font-size: .92rem; max-width: 42ch; margin: 0 auto 18px; }
-  .slot-tag { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--margin-red); margin-bottom: 10px; }
+  /* Forms */
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; align-items: start; }
+  .form-slot { border: 1px solid var(--line); border-radius: 16px; padding: 26px 22px; background: var(--card); text-align: center; min-width: 0; box-shadow: var(--shadow); }
+  .form-slot h3 { font-size: 1.12rem; margin-bottom: 8px; }
+  .form-slot > p { color: var(--ink-soft); font-size: .93rem; max-width: 42ch; margin: 0 auto 18px; }
+  .slot-tag { display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+  .form-slot .btn { width: 100%; }
   .demo-form { text-align: left; display: grid; gap: 12px; margin-top: 18px; }
-  .demo-form label { display: grid; gap: 4px; font-size: .85rem; font-weight: 700; color: var(--ink); }
-  .demo-form input, .demo-form select { font-family: var(--body); font-size: .95rem; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 9px 11px; width: 100%; box-sizing: border-box; }
+  .demo-form label { display: grid; gap: 4px; font-size: .86rem; font-weight: 700; color: var(--ink); }
+  .demo-form input, .demo-form select { font-family: var(--body); font-size: 1rem; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 12px; width: 100%; min-height: 46px; }
   .demo-form input:focus, .demo-form select:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
-  .demo-note { font-size: .8rem; color: var(--ink-soft); background: var(--chip); border-radius: 8px; padding: 8px 12px; text-align: center; }
-  .demo-done { margin-top: 18px; background: var(--chip); border-radius: 10px; padding: 16px; font-size: .95rem; color: var(--ink); }
+  .demo-note { font-size: .8rem; color: var(--ink-soft); background: var(--sky); border-radius: 10px; padding: 8px 12px; text-align: center; }
+  .demo-done { margin-top: 18px; background: var(--sky); border-radius: 12px; padding: 16px; font-size: .95rem; color: var(--ink); }
+
+  /* Testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .quote { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; min-width: 0; box-shadow: var(--shadow); }
+  .quote p { color: var(--ink); font-size: .95rem; }
+  .quote .who { margin-top: 12px; color: var(--ink-soft); font-size: .85rem; font-weight: 700; }
+  .stars { color: #f5a623; letter-spacing: 2px; font-size: .9rem; }
+
+  /* FAQ */
+  .faq { display: grid; gap: 10px; max-width: 720px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 0; overflow: hidden; }
+  summary { cursor: pointer; font-weight: 700; padding: 16px 18px; color: var(--ink); list-style-position: inside; }
+  summary:hover { color: var(--blue); }
+  details p { padding: 0 18px 16px; color: var(--ink-soft); }
 
   /* Contact */
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
-  .contact-card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 20px; min-width: 0; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .contact-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; min-width: 0; box-shadow: var(--shadow); }
   .contact-card h3 { font-size: 1rem; margin-bottom: 6px; }
   .contact-card p, .contact-card a { font-size: .95rem; color: var(--ink-soft); word-break: break-word; }
-  .tbd { color: var(--margin-red); font-weight: 700; }
+  .tbd { color: var(--coral); font-weight: 700; }
 
-  footer { border-top: 1px solid var(--rule); padding-block: 24px 34px; color: var(--ink-soft); font-size: .88rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer { border-top: 1px solid var(--line); padding-block: 24px 34px; color: var(--ink-soft); font-size: .88rem; }
+  .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-  :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
-  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
-  body { margin: 0; }
-  img { max-width: 100%; }
+  /* Floating WhatsApp button */
+  .wa-float { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 20;
+    width: 56px; height: 56px; border-radius: 50%; background: var(--wa); display: grid; place-items: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
 </style>
 </head>
 <body>
@@ -131,30 +202,32 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top"><span class="logo-badge">TA</span>Tutor's Academy</a>
-    <nav class="nav-links">
+    <button class="menu-btn" type="button" id="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links">
       <a href="#how">How it works</a>
-      <a href="#openings">Openings</a>
-      <a href="#apply">Apply</a>
+      <a href="#openings">Tutor openings</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#apply">Book free demo</a>
     </nav>
   </div>
 </header>
 
 <div class="hero" id="top">
   <div class="wrap hero-inner">
-    <p class="eyebrow">Delhi / NCR &amp; Online · Nursery to Class 12</p>
-    <h1>The right tutor for every student.</h1>
-    <p>Tutor's Academy connects parents and students with verified tutors for online and home tuition, across all major subjects and boards. Free demo class. Support at every step.</p>
+    <p class="eyebrow">Delhi NCR &amp; Online · Nursery to Class 12</p>
+    <h1>Home &amp; online tuition with the right tutor for every student</h1>
+    <p>Tutor's Academy matches parents and students with verified tutors for all subjects and boards. Start with a free demo class, then learn on your schedule.</p>
     <div class="cta-row">
-      <a class="btn btn-solid" href="#apply">I need a tutor</a>
-      <a class="btn btn-line" href="#openings">I am a tutor</a>
+      <a class="btn btn-solid" href="#apply">Book a free demo</a>
+      <a class="btn btn-line" href="#openings">Join as a tutor</a>
     </div>
   </div>
 </div>
 
-<main class="wrap">
+<main>
 
-  <div class="stats">
+  <div class="wrap stats">
     <div class="stat"><b>Nursery–12th</b><span>All classes covered</span></div>
     <div class="stat"><b>All subjects</b><span>Maths, Science, English &amp; more</span></div>
     <div class="stat"><b>Online + Home</b><span>You choose the mode</span></div>
@@ -162,127 +235,191 @@
   </div>
 
   <section id="how">
-    <div class="sec-head">
-      <h2>How it works</h2>
-      <p>Two simple paths, whether you're looking for a tutor or looking for work.</p>
-    </div>
-    <div class="two-col">
-      <div class="path">
-        <h3>For parents &amp; students</h3>
-        <ol>
-          <li><b>Tell us what you need.</b> Class, subject, schedule, budget and mode, through a short form.</li>
-          <li><b>Take a free demo.</b> We match a tutor to your requirement and arrange a demo class.</li>
-          <li><b>Start learning.</b> Happy with the demo? Classes begin on your schedule.</li>
-        </ol>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How tuition with us works</h2>
+        <p>Two simple paths, whether you're looking for a tutor or looking for work.</p>
       </div>
-      <div class="path">
-        <h3>For tutors</h3>
-        <ol>
-          <li><b>Register once.</b> Share your subjects, classes, experience and expected fee.</li>
-          <li><b>Pick an opening.</b> New tuition requirements are posted regularly, each with a number.</li>
-          <li><b>Get matched.</b> Apply to the assignments that fit you and we handle the rest.</li>
-        </ol>
+      <div class="two-col">
+        <div class="path">
+          <h3>For parents &amp; students</h3>
+          <ol>
+            <li><b>Tell us what you need.</b> Class, subject, schedule, budget and mode, through a short form.</li>
+            <li><b>Take a free demo.</b> We match a tutor to your requirement and arrange a demo class.</li>
+            <li><b>Start learning.</b> Happy with the demo? Classes begin on your schedule.</li>
+          </ol>
+        </div>
+        <div class="path">
+          <h3>For tutors</h3>
+          <ol>
+            <li><b>Register once.</b> Share your subjects, classes, experience and expected fee.</li>
+            <li><b>Pick an opening.</b> New tuition requirements are posted regularly, each with a number.</li>
+            <li><b>Get matched.</b> Apply to the assignments that fit you and we handle the rest.</li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="openings">
-    <div class="sec-head">
-      <h2>Current openings</h2>
-      <p>Live tuition requirements for tutors. Each assignment has a number, so quote it when you apply.</p>
+  <section id="openings" class="tinted">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Current tuition openings for tutors</h2>
+        <p>Live requirements, each with an assignment number. Quote it when you apply.</p>
+      </div>
+      <p class="board-note">Sample listings for this demo. The live site will show real, current assignments.</p>
+      <div class="cards" id="board"></div>
     </div>
-    <p class="board-note">Sample listings for this demo. The live site will show real, current assignments.</p>
-    <div class="cards" id="board"></div>
   </section>
 
   <section id="apply">
-    <div class="sec-head">
-      <h2>Apply now</h2>
-      <p>Both forms take under three minutes. We reply on WhatsApp.</p>
-    </div>
-    <div class="form-grid">
-      <!-- FILL: when the real "Request a Tutor" Google Form is ready, replace this whole
-           demo form with the Google Form link or its <iframe> embed code. -->
-      <div class="form-slot">
-        <span class="slot-tag">For parents &amp; students</span>
-        <h3>Request a tutor</h3>
-        <p>Student's class, subjects, board, preferred schedule, budget and mode. We'll contact you with a matched tutor and a free demo.</p>
-        <button class="btn btn-solid" type="button" data-toggle="parent-form">Open the form</button>
-        <form class="demo-form" id="parent-form" hidden>
-          <label>Parent / student name <input type="text" id="p-name" required></label>
-          <label>WhatsApp number <input type="tel" id="p-phone" required></label>
-          <label>Student's class
-            <select id="p-class" required>
-              <option value="">Select class</option>
-              <option>Nursery – KG</option><option>Class 1–5</option><option>Class 6</option>
-              <option>Class 7</option><option>Class 8</option><option>Class 9</option>
-              <option>Class 10</option><option>Class 11</option><option>Class 12</option>
-            </select>
-          </label>
-          <label>Subjects needed <input type="text" id="p-subjects" placeholder="e.g. Maths, Science" required></label>
-          <label>Mode
-            <select id="p-mode" required>
-              <option value="">Select mode</option>
-              <option>Online</option><option>Home tuition</option><option>Either</option>
-            </select>
-          </label>
-          <label>Monthly budget (₹) <input type="text" id="p-budget" placeholder="e.g. 6000"></label>
-          <button class="btn btn-solid" type="submit">Submit request</button>
-          <p class="demo-note">Demo form. Responses are not saved yet. The live site will send this straight to Tutor's Academy.</p>
-        </form>
-        <div class="demo-done" id="parent-done" hidden><b>Request received!</b> On the live site, Tutor's Academy would now contact you on WhatsApp to arrange a free demo class.</div>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Book a free demo or register as a tutor</h2>
+        <p>Both forms take under three minutes. We reply on WhatsApp.</p>
       </div>
-      <!-- FILL: when the real "Tutor Registration" Google Form is ready, replace this whole
-           demo form with the Google Form link or its <iframe> embed code. -->
-      <div class="form-slot">
-        <span class="slot-tag">For tutors</span>
-        <h3>Register as a tutor</h3>
-        <p>Your qualifications, subjects, classes you teach, experience, city and expected fee. Mention an assignment number if you're applying to a specific opening.</p>
-        <button class="btn btn-line" type="button" data-toggle="tutor-form">Open the form</button>
-        <form class="demo-form" id="tutor-form" hidden>
-          <label>Full name <input type="text" id="t-name" required></label>
-          <label>WhatsApp number <input type="tel" id="t-phone" required></label>
-          <label>Highest qualification <input type="text" id="t-qual" placeholder="e.g. B.Sc, M.A, B.Ed" required></label>
-          <label>Subjects you teach <input type="text" id="t-subjects" placeholder="e.g. Maths, Physics" required></label>
-          <label>Classes you teach <input type="text" id="t-classes" placeholder="e.g. 6 to 10" required></label>
-          <label>Mode
-            <select id="t-mode" required>
-              <option value="">Select mode</option>
-              <option>Online</option><option>Home tuition</option><option>Either</option>
-            </select>
-          </label>
-          <label>Assignment number (optional) <input type="text" id="t-assign" placeholder="e.g. 148"></label>
-          <button class="btn btn-solid" type="submit">Submit registration</button>
-          <p class="demo-note">Demo form. Responses are not saved yet. The live site will send this straight to Tutor's Academy.</p>
-        </form>
-        <div class="demo-done" id="tutor-done" hidden><b>Registration received!</b> On the live site, Tutor's Academy would now verify your profile and share matching assignments on WhatsApp.</div>
+      <div class="form-grid">
+        <!-- FILL: when the real "Request a Tutor" Google Form is ready, replace this whole
+             demo form with the Google Form link or its <iframe> embed code. -->
+        <div class="form-slot">
+          <span class="slot-tag">For parents &amp; students</span>
+          <h3>Request a tutor</h3>
+          <p>Student's class, subjects, preferred schedule, budget and mode. We'll contact you with a matched tutor and a free demo.</p>
+          <button class="btn btn-solid" type="button" data-toggle="parent-form">Open the form</button>
+          <form class="demo-form" id="parent-form" hidden>
+            <label>Parent / student name <input type="text" id="p-name" required></label>
+            <label>WhatsApp number <input type="tel" id="p-phone" required></label>
+            <label>Student's class
+              <select id="p-class" required>
+                <option value="">Select class</option>
+                <option>Nursery – KG</option><option>Class 1–5</option><option>Class 6</option>
+                <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+                <option>Class 10</option><option>Class 11</option><option>Class 12</option>
+              </select>
+            </label>
+            <label>Subjects needed <input type="text" id="p-subjects" placeholder="e.g. Maths, Science" required></label>
+            <label>Mode
+              <select id="p-mode" required>
+                <option value="">Select mode</option>
+                <option>Online</option><option>Home tuition</option><option>Either</option>
+              </select>
+            </label>
+            <label>Monthly budget (₹) <input type="text" id="p-budget" placeholder="e.g. 6000"></label>
+            <button class="btn btn-solid" type="submit">Submit request</button>
+            <p class="demo-note">Demo form. Responses are not saved yet. The live site will send this straight to Tutor's Academy.</p>
+          </form>
+          <div class="demo-done" id="parent-done" hidden><b>Request received!</b> On the live site, Tutor's Academy would now contact you on WhatsApp to arrange a free demo class.</div>
+        </div>
+        <!-- FILL: when the real "Tutor Registration" Google Form is ready, replace this whole
+             demo form with the Google Form link or its <iframe> embed code. -->
+        <div class="form-slot">
+          <span class="slot-tag">For tutors</span>
+          <h3>Register as a tutor</h3>
+          <p>Your qualifications, subjects, classes you teach, experience, city and expected fee. Mention an assignment number if applying to a specific opening.</p>
+          <button class="btn btn-line" type="button" data-toggle="tutor-form">Open the form</button>
+          <form class="demo-form" id="tutor-form" hidden>
+            <label>Full name <input type="text" id="t-name" required></label>
+            <label>WhatsApp number <input type="tel" id="t-phone" required></label>
+            <label>Highest qualification <input type="text" id="t-qual" placeholder="e.g. B.Sc, M.A, B.Ed" required></label>
+            <label>Subjects you teach <input type="text" id="t-subjects" placeholder="e.g. Maths, Physics" required></label>
+            <label>Classes you teach <input type="text" id="t-classes" placeholder="e.g. 6 to 10" required></label>
+            <label>Mode
+              <select id="t-mode" required>
+                <option value="">Select mode</option>
+                <option>Online</option><option>Home tuition</option><option>Either</option>
+              </select>
+            </label>
+            <label>Assignment number (optional) <input type="text" id="t-assign" placeholder="e.g. 148"></label>
+            <button class="btn btn-solid" type="submit">Submit registration</button>
+            <p class="demo-note">Demo form. Responses are not saved yet. The live site will send this straight to Tutor's Academy.</p>
+          </form>
+          <div class="demo-done" id="tutor-done" hidden><b>Registration received!</b> On the live site, Tutor's Academy would now verify your profile and share matching assignments on WhatsApp.</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="sec-head">
-      <h2>Contact us</h2>
-      <p>Reach us directly, or follow for new openings as they're posted.</p>
+  <section class="tinted" id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What parents and tutors say</h2>
+        <p>Sample testimonials for this demo. Real reviews will go here.</p>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <p class="stars">★★★★★</p>
+          <p>"The demo class convinced us immediately. My daughter's maths marks improved within two months."</p>
+          <p class="who">Parent, Class 10 student · Delhi</p>
+        </div>
+        <div class="quote">
+          <p class="stars">★★★★★</p>
+          <p>"I registered as a tutor and got my first assignment within a week. The team supported me at every step."</p>
+          <p class="who">Tutor, Science &amp; Maths · Noida</p>
+        </div>
+        <div class="quote">
+          <p class="stars">★★★★★</p>
+          <p>"Finding an online English tutor for my son was effortless. Clear fees, no surprises."</p>
+          <p class="who">Parent, Class 7 student · Gurugram</p>
+        </div>
+      </div>
     </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>WhatsApp</h3>
-        <!-- FILL: phone numbers go here, e.g. +91 XXXXX XXXXX -->
-        <p class="tbd">[ Number to be added ]</p>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Frequently asked questions</h2>
       </div>
-      <div class="contact-card">
-        <h3>Email</h3>
-        <!-- FILL: official email goes here -->
-        <p class="tbd">[ Email to be added ]</p>
+      <div class="faq">
+        <details>
+          <summary>Is the demo class really free?</summary>
+          <p>Yes. Every new student gets one free demo class with a matched tutor before committing to anything.</p>
+        </details>
+        <details>
+          <summary>Which classes and subjects do you cover?</summary>
+          <p>Nursery to Class 12, all major subjects including Maths, Science, English, Social Science, Economics and Statistics, for all boards.</p>
+        </details>
+        <details>
+          <summary>Do you offer home tuition or online classes?</summary>
+          <p>Both. Home tuition is available in Delhi NCR, and online classes are available everywhere.</p>
+        </details>
+        <details>
+          <summary>How do tutors get assignments?</summary>
+          <p>Register once as a tutor, then apply to numbered tuition openings as they are posted. We match you and support you through the process.</p>
+        </details>
+        <details>
+          <summary>How much does tuition cost?</summary>
+          <p>Fees depend on class, subject and schedule, typically from a few hundred rupees per hour. Tell us your budget and we will match accordingly.</p>
+        </details>
       </div>
-      <div class="contact-card">
-        <h3>Instagram</h3>
-        <a href="https://www.instagram.com/tutors_academy__/">@tutors_academy__</a>
+    </div>
+  </section>
+
+  <section id="contact" class="tinted">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Contact Tutor's Academy</h2>
+        <p>Reach us directly, or follow for new openings as they're posted.</p>
       </div>
-      <div class="contact-card">
-        <h3>WhatsApp Channel</h3>
-        <a href="https://whatsapp.com/channel/0029Vb9T3XMIHphCL0TiXI1G">Tutor's Academy channel</a>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>WhatsApp</h3>
+          <!-- FILL: phone numbers go here, e.g. +91 XXXXX XXXXX, and link them as https://wa.me/91XXXXXXXXXX -->
+          <p class="tbd">[ Number to be added ]</p>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <!-- FILL: official email goes here -->
+          <p class="tbd">[ Email to be added ]</p>
+        </div>
+        <div class="contact-card">
+          <h3>Instagram</h3>
+          <a href="https://www.instagram.com/tutors_academy__/">@tutors_academy__</a>
+        </div>
+        <div class="contact-card">
+          <h3>WhatsApp Channel</h3>
+          <a href="https://whatsapp.com/channel/0029Vb9T3XMIHphCL0TiXI1G">Tutor's Academy channel</a>
+        </div>
       </div>
     </div>
   </section>
@@ -290,13 +427,30 @@
 </main>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-inline:0;">
+  <div class="wrap foot">
     <span>© 2026 Tutor's Academy. All rights reserved.</span>
     <span>Verify all details before making any payment. Official communication comes only through our listed contacts.</span>
   </div>
 </footer>
 
+<!-- Floating WhatsApp button.
+     FILL: when the WhatsApp number is ready, change this href to https://wa.me/91XXXXXXXXXX -->
+<a class="wa-float" href="https://whatsapp.com/channel/0029Vb9T3XMIHphCL0TiXI1G" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.9C8.8 2.9 2.9 8.7 2.9 15.9c0 2.3.6 4.5 1.8 6.5L2.8 29l6.8-1.8c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13.1-5.8 13.1-13S23.2 2.9 16 2.9zm0 23.8c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1 1.1-3.9-.3-.4c-1.1-1.8-1.7-3.8-1.7-5.9C5.1 9.9 10 5 16 5s10.9 4.9 10.9 10.9S22 26.7 16 26.7zm6-8.1c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6-.1-.2-.8-1.8-1-2.5-.3-.6-.5-.5-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
 <script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  menuBtn.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+  });
+  navLinks.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") { navLinks.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }
+  });
+
   // Sample openings for the demo. On the live site this list can come from a Google Sheet
   // the academy updates, so new assignments appear without editing the page.
   const openings = [
