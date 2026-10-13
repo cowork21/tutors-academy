@@ -99,11 +99,17 @@
   .card .btn { margin-top: auto; text-align: center; padding: 9px 0; font-size: .9rem; }
 
   /* Form placeholders */
-  .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start; }
   .form-slot { border: 2px dashed var(--rule); border-radius: 14px; padding: 28px 24px; background: var(--card); text-align: center; min-width: 0; }
   .form-slot h3 { font-size: 1.1rem; margin-bottom: 8px; }
   .form-slot p { color: var(--ink-soft); font-size: .92rem; max-width: 42ch; margin: 0 auto 18px; }
   .slot-tag { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--margin-red); margin-bottom: 10px; }
+  .demo-form { text-align: left; display: grid; gap: 12px; margin-top: 18px; }
+  .demo-form label { display: grid; gap: 4px; font-size: .85rem; font-weight: 700; color: var(--ink); }
+  .demo-form input, .demo-form select { font-family: var(--body); font-size: .95rem; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 9px 11px; width: 100%; box-sizing: border-box; }
+  .demo-form input:focus, .demo-form select:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+  .demo-note { font-size: .8rem; color: var(--ink-soft); background: var(--chip); border-radius: 8px; padding: 8px 12px; text-align: center; }
+  .demo-done { margin-top: 18px; background: var(--chip); border-radius: 10px; padding: 16px; font-size: .95rem; color: var(--ink); }
 
   /* Contact */
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
@@ -195,20 +201,61 @@
       <p>Both forms take under three minutes. We reply on WhatsApp.</p>
     </div>
     <div class="form-grid">
-      <!-- FILL: replace the href="#" below with the "Request a Tutor" Google Form link.
-           The form can also be embedded here directly with its <iframe> embed code. -->
+      <!-- FILL: when the real "Request a Tutor" Google Form is ready, replace this whole
+           demo form with the Google Form link or its <iframe> embed code. -->
       <div class="form-slot">
         <span class="slot-tag">For parents &amp; students</span>
         <h3>Request a tutor</h3>
         <p>Student's class, subjects, board, preferred schedule, budget and mode. We'll contact you with a matched tutor and a free demo.</p>
-        <a class="btn btn-solid" href="#">Open the form</a>
+        <button class="btn btn-solid" type="button" data-toggle="parent-form">Open the form</button>
+        <form class="demo-form" id="parent-form" hidden>
+          <label>Parent / student name <input type="text" id="p-name" required></label>
+          <label>WhatsApp number <input type="tel" id="p-phone" required></label>
+          <label>Student's class
+            <select id="p-class" required>
+              <option value="">Select class</option>
+              <option>Nursery – KG</option><option>Class 1–5</option><option>Class 6</option>
+              <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+              <option>Class 10</option><option>Class 11</option><option>Class 12</option>
+            </select>
+          </label>
+          <label>Subjects needed <input type="text" id="p-subjects" placeholder="e.g. Maths, Science" required></label>
+          <label>Mode
+            <select id="p-mode" required>
+              <option value="">Select mode</option>
+              <option>Online</option><option>Home tuition</option><option>Either</option>
+            </select>
+          </label>
+          <label>Monthly budget (₹) <input type="text" id="p-budget" placeholder="e.g. 6000"></label>
+          <button class="btn btn-solid" type="submit">Submit request</button>
+          <p class="demo-note">Demo form. Responses are not saved yet. The live site will send this straight to Tutor's Academy.</p>
+        </form>
+        <div class="demo-done" id="parent-done" hidden><b>Request received!</b> On the live site, Tutor's Academy would now contact you on WhatsApp to arrange a free demo class.</div>
       </div>
-      <!-- FILL: replace the href="#" below with the "Tutor Registration" Google Form link. -->
+      <!-- FILL: when the real "Tutor Registration" Google Form is ready, replace this whole
+           demo form with the Google Form link or its <iframe> embed code. -->
       <div class="form-slot">
         <span class="slot-tag">For tutors</span>
         <h3>Register as a tutor</h3>
         <p>Your qualifications, subjects, classes you teach, experience, city and expected fee. Mention an assignment number if you're applying to a specific opening.</p>
-        <a class="btn btn-line" href="#">Open the form</a>
+        <button class="btn btn-line" type="button" data-toggle="tutor-form">Open the form</button>
+        <form class="demo-form" id="tutor-form" hidden>
+          <label>Full name <input type="text" id="t-name" required></label>
+          <label>WhatsApp number <input type="tel" id="t-phone" required></label>
+          <label>Highest qualification <input type="text" id="t-qual" placeholder="e.g. B.Sc, M.A, B.Ed" required></label>
+          <label>Subjects you teach <input type="text" id="t-subjects" placeholder="e.g. Maths, Physics" required></label>
+          <label>Classes you teach <input type="text" id="t-classes" placeholder="e.g. 6 to 10" required></label>
+          <label>Mode
+            <select id="t-mode" required>
+              <option value="">Select mode</option>
+              <option>Online</option><option>Home tuition</option><option>Either</option>
+            </select>
+          </label>
+          <label>Assignment number (optional) <input type="text" id="t-assign" placeholder="e.g. 148"></label>
+          <button class="btn btn-solid" type="submit">Submit registration</button>
+          <p class="demo-note">Demo form. Responses are not saved yet. The live site will send this straight to Tutor's Academy.</p>
+        </form>
+        <div class="demo-done" id="tutor-done" hidden><b>Registration received!</b> On the live site, Tutor's Academy would now verify your profile and share matching assignments on WhatsApp.</div>
       </div>
     </div>
   </section>
@@ -273,6 +320,25 @@
       '<span class="fee">' + o.fee + '</span></div>' +
       '<a class="btn btn-line" href="#apply">Apply for this</a>';
     board.appendChild(card);
+  }
+
+  // Demo forms: the buttons reveal an in-page form; submitting shows a confirmation.
+  // Nothing is saved. Replace with real Google Form links when they're ready (see FILL comments).
+  for (const btn of document.querySelectorAll("[data-toggle]")) {
+    btn.addEventListener("click", () => {
+      const form = document.getElementById(btn.dataset.toggle);
+      form.hidden = !form.hidden;
+      if (!form.hidden) form.querySelector("input, select").focus();
+    });
+  }
+  for (const [formId, doneId] of [["parent-form", "parent-done"], ["tutor-form", "tutor-done"]]) {
+    const form = document.getElementById(formId);
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      form.hidden = true;
+      form.previousElementSibling.hidden = true; // hide the "Open the form" button
+      document.getElementById(doneId).hidden = false;
+    });
   }
 </script>
 </body>
