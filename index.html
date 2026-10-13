@@ -65,18 +65,8 @@
     --display: "Baloo 2", "Trebuchet MS", sans-serif;
     --body: "Karla", "Segoe UI", Arial, sans-serif;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper: #11171a; --tint: #141b1e; --card: #171f23; --ink: #e8edef; --ink-soft: #99a7af;
-      --blue: #4cc4b6; --blue-deep: #76d6cb; --sky: #1c2b2d; --line: #273135; --coral: #8c9aa4;
-      --shadow: none; color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --paper: #11171a; --tint: #141b1e; --card: #171f23; --ink: #e8edef; --ink-soft: #99a7af;
-    --blue: #4cc4b6; --blue-deep: #76d6cb; --sky: #1c2b2d; --line: #273135; --coral: #8c9aa4;
-    --shadow: none; color-scheme: dark;
-  }
+  /* The site always renders light, regardless of the device's dark mode. */
+  :root { color-scheme: light; }
 
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; }
