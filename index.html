@@ -7,7 +7,7 @@
 <meta name="description" content="Tutor's Academy connects parents and students with verified tutors for online and home tuition, Nursery to Class 12, all subjects and boards, across Delhi NCR. Free demo class.">
 <!-- FILL: when the client's domain is connected, change this canonical URL to the real domain. -->
 <link rel="canonical" href="https://cowork21.github.io/tutors-academy/">
-<meta name="theme-color" content="#2e7cd6">
+<meta name="theme-color" content="#0d7a6f">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tutor's Academy — Home & Online Tuition in Delhi NCR">
 <meta property="og:description" content="Verified tutors for Nursery to Class 12, online and at home. All subjects, all boards. Free demo class.">
@@ -48,34 +48,34 @@
 }
 </script>
 <style>
-  /* Layout: light, airy, phone-first single column; soft sky tints, white cards, big tap targets. */
+  /* Layout: minimal white, phone-first single column; one teal accent, flat cards, thin borders. */
   :root {
     --paper: #ffffff;        /* page background */
-    --tint: #f2f8ff;         /* alternating section tint */
+    --tint: #fafbfb;         /* alternating section tint, barely there */
     --card: #ffffff;         /* card surface */
-    --ink: #24354d;          /* body text */
-    --ink-soft: #5e718a;     /* secondary text */
-    --blue: #2e7cd6;         /* primary accent */
-    --blue-deep: #1d5fb0;    /* hover / headings */
-    --sky: #dcecfd;          /* soft highlight */
-    --line: #e3ebf5;         /* borders */
-    --coral: #e8604c;        /* small highlights (assignment tags) */
+    --ink: #1f2a33;          /* body text */
+    --ink-soft: #66737e;     /* secondary text */
+    --blue: #0d7a6f;         /* primary accent (teal) */
+    --blue-deep: #085f56;    /* hover / headings */
+    --sky: #eaf4f2;          /* soft highlight */
+    --line: #e6e9ec;         /* borders */
+    --coral: #7c8792;        /* small muted labels (assignment tags) */
     --wa: #25d366;           /* WhatsApp green */
-    --shadow: 0 2px 12px rgba(36, 53, 77, .07);
+    --shadow: none;
     --display: "Baloo 2", "Trebuchet MS", sans-serif;
     --body: "Karla", "Segoe UI", Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #121a26; --tint: #16202e; --card: #1b2634; --ink: #e9eef6; --ink-soft: #9db0c7;
-      --blue: #6ea8ff; --blue-deep: #93bfff; --sky: #22344d; --line: #2b3a4e; --coral: #ff8572;
-      --shadow: 0 2px 12px rgba(0,0,0,.3); color-scheme: dark;
+      --paper: #11171a; --tint: #141b1e; --card: #171f23; --ink: #e8edef; --ink-soft: #99a7af;
+      --blue: #4cc4b6; --blue-deep: #76d6cb; --sky: #1c2b2d; --line: #273135; --coral: #8c9aa4;
+      --shadow: none; color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --paper: #121a26; --tint: #16202e; --card: #1b2634; --ink: #e9eef6; --ink-soft: #9db0c7;
-    --blue: #6ea8ff; --blue-deep: #93bfff; --sky: #22344d; --line: #2b3a4e; --coral: #ff8572;
-    --shadow: 0 2px 12px rgba(0,0,0,.3); color-scheme: dark;
+    --paper: #11171a; --tint: #141b1e; --card: #171f23; --ink: #e8edef; --ink-soft: #99a7af;
+    --blue: #4cc4b6; --blue-deep: #76d6cb; --sky: #1c2b2d; --line: #273135; --coral: #8c9aa4;
+    --shadow: none; color-scheme: dark;
   }
 
   * { box-sizing: border-box; }
@@ -108,8 +108,8 @@
   }
 
   /* Hero */
-  .hero { background: linear-gradient(180deg, var(--sky), var(--paper)); }
-  .hero-inner { padding-block: 56px 48px; max-width: 660px; }
+  .hero { background: var(--paper); border-bottom: 1px solid var(--line); }
+  .hero-inner { padding-block: 64px 56px; max-width: 660px; }
   .eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); }
   .hero h1 { font-size: clamp(1.9rem, 6vw, 2.9rem); margin-block: 10px 14px; }
   .hero p { color: var(--ink-soft); max-width: 50ch; font-size: 1.05rem; }
